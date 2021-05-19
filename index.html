@@ -1,0 +1,65 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Image recognition</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    
+    
+    </head>
+    <body>
+    <br>
+    <center>
+    <button id="v" type="button" class="btn btn-success">IMAGE RECOGNITION</button> 
+    <br>
+    <h3 class="btn btn-warning">Model is trained to identify the following objects:</h3>
+    
+    <br>
+    <div>
+    <div class="col-lg-2 col-md-2 col-sm-2" id="d1" ><h5>Mobile Phone</h5>
+      <img src="https://img.icons8.com/cute-clipart/64/000000/iphone-x.png"/>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2" id="d2"><h5>Rubic Cube</h5>
+      <img src="https://img.icons8.com/color/48/000000/rubiks-cube.png"/>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2" id="d3"><h5>Book</h5>
+        <img src="https://img.icons8.com/color/48/000000/book.png"/>
+        </div>
+    <div class="col-lg-2 col-md-2 col-sm-2" id="d4"><h5>Computer Mouse</h5>
+      <img src="https://img.icons8.com/nolan/64/mouse.png"/>
+      </div>
+    <div class="col-lg-2 col-md-2 col-sm-2" id="d5"><h5>AC Remote</h5>
+      <img src="https://img.icons8.com/color/48/000000/remote-control.png"/>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2" id="d6"><h5>A Superman Toy</h5>
+        <img  src="https://img.icons8.com/color/48/000000/super-hero-male.png"/>
+        </div>
+      </div>
+    <br>
+    <br>
+    <br>
+    <div>
+      <label id="n" class="col-sm-12 col-md-12 col-lg-12">Webcam View</label>
+    <div id="camera"></div>
+  </div> 
+      <br><br>
+      <div id="result"></div>
+      <br><br>
+      <button onclick="take_snapshot();" class="btn btn-info">Capture Image</button>
+      <br><br>
+      <button onclick="check();" class="btn btn-success">Identify Image</button>
+      <br><br>
+      <p style="font-size: 22px;">Object : <span id="result_object_name"></span> </p>
+      <p style="font-size: 22px;">Accuracy : <span id="result_object_accuracy"></span> </p>
+
+
+    </center>
+    <script src="main.js"></script>
+    </body> 
+</html>
